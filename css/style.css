@@ -45,7 +45,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    background: var(--bg);
+    background: #12252c;
 }
 
 section {
@@ -80,7 +80,7 @@ section {
 }
 
 .header {
-    background: var(--bg);
+    background-image: image(cofie);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -220,7 +220,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(../images/home-img.jpeg) no-repeat;
+    background: url(../images/cafe.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -230,14 +230,14 @@ section {
 }
 
 .home .content h3 {
-    font-size: 6rem;
+    font-size: 4rem;
     text-transform: uppercase;
     color: #fff;
 }
 
 .home .content p {
     font-size: 2rem;
-    font-weight: lighter;
+    font-weight: 350;
     line-height: 1.8;
     padding: 1rem 0;
     color: #eee;
@@ -521,8 +521,10 @@ section {
 }
 
 .footer {
-    background: var(--black);
+    background: #12252c;
     text-align: center;
+    color: #ccc;
+    font-size: 25px;
 }
 
 .footer .share {
