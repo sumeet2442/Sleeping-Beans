@@ -27,3 +27,8 @@ window.onscroll = () => {
     searchForm.classList.remove('active');
     cartItem.classList.remove('active');
 }
+
+function placeOrder() {
+    var placeOrder = document.getElementById("myOrder");
+    placeOrder.classList.toggle("show");
+}
