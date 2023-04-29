@@ -28,6 +28,7 @@ window.onscroll = () => {
     cartItem.classList.remove('active');
 }
 
-function myFun() {
-    console.log("Hello World!");
+function placeOrder() {
+    var placeOrder = document.getElementById("myOrder");
+    placeOrder.classList.toggle("show");
 }
