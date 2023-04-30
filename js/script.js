@@ -28,7 +28,18 @@ window.onscroll = () => {
     cartItem.classList.remove('active');
 }
 
-function placeOrder() {
-    var placeOrder = document.getElementById("myOrder");
-    placeOrder.classList.toggle("show");
+// function placeOrder() {
+//     var placeOrder = document.getElementById("myOrder");
+//     placeOrder.classList.toggle("show");
+// }
+
+var item = [];
+
+function addItem(items) {
+    item.push(items);
+    document.getElementById("item").innerHTML = item;
+
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
