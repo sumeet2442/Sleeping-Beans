@@ -31,21 +31,25 @@ window.onscroll = () => {
 var item = [];
 
 function searchItem() {
-    var items = ['Latte', 'Hot Mocha', 'Cappacuino', 'Americano', 'Espresso', 'Frappe', 'Iced Tea', 'Cold Brew'];
-    let search_item = document.getElementById('search-box').value;
+    var items = ['latte', 'hot mocha', 'cappacuino', 'americano', 'espresso', 'frappe', 'iced tea', 'cold brew'];
+    let search_item = document.getElementById('search-box').value.toLowerCase();
     console.log(search_item);
     for (var i = 0; i < items.length; i++) {
         if (items[i] == search_item) {
+            $(window).scrollTop($(search_item).offset().top);
+            /*
             let text = document.getElementById("menu").innerHTML;
   	        let re = new RegExp(search_item,"g"); // search for all instances
 		    let newText = text.replace(re, `<mark>${search_item}</mark>`);
 		    document.getElementById("menu").innerHTML = newText;
+            */
             break;
-        } else if (items[i] != search_item) {
-            var x = document.getElementById("item_snackbar");
-            x.className = "show";
-            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
         }
+    }
+    if (items[i] != search_item) {
+        var x = document.getElementById("item_snackbar");
+        x.className = "show";
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
     }
 }
 
