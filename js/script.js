@@ -77,7 +77,7 @@ function addItem(items) {
 
         cart_items += `<div class='cart-item'>
             <span class='fas fa-times'></span>
-            <img src='images/cart-item-1.png' alt='' />
+            <img src='images/menu-${i + 1}.png' alt='' />
             <div class='content'>
                 <h3 id='item'>${item[i][0]}</h3>
                 <div class='price' id='pricee'>${item[i][1]}</div>
