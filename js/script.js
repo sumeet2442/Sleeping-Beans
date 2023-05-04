@@ -36,13 +36,14 @@ function searchItem() {
     console.log(search_item);
     for (var i = 0; i < items.length; i++) {
         if (items[i] == search_item) {
-            $(window).scrollTop($(search_item).offset().top);
+            navbar.classList.toggle('active');
             /*
             let text = document.getElementById("menu").innerHTML;
-  	        let re = new RegExp(search_item,"g"); // search for all instances
-		    let newText = text.replace(re, `<mark>${search_item}</mark>`);
-		    document.getElementById("menu").innerHTML = newText;
+                let re = new RegExp(search_item,"g"); // search for all instances
+            let newText = text.replace(re, `<mark>${search_item}</mark>`);
+            document.getElementById("menu").innerHTML = newText;
             */
+            location.replace("#menu")
             break;
         }
     }
