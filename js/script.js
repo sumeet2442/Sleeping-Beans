@@ -30,12 +30,31 @@ window.onscroll = () => {
 
 var item = [];
 
+function searchItem() {
+    var items = ['Latte', 'Hot Mocha', 'Cappacuino', 'Americano', 'Espresso', 'Frappe', 'Iced Tea', 'Cold Brew'];
+    let search_item = document.getElementById('search-box').value;
+    console.log(search_item);
+    for (var i = 0; i < items.length; i++) {
+        if (items[i] == search_item) {
+            let text = document.getElementById("menu").innerHTML;
+  	        let re = new RegExp(search_item,"g"); // search for all instances
+		    let newText = text.replace(re, `<mark>${search_item}</mark>`);
+		    document.getElementById("menu").innerHTML = newText;
+            break;
+        } else if (items[i] != search_item) {
+            var x = document.getElementById("item_snackbar");
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        }
+    }
+}
+
 function placeOrder() {
     var x = document.getElementById("snackbar1");
     x.className = "show";
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
-    
-    document.getElementById("cart-items").innerHTML = '';   
+
+    document.getElementById("cart-items").innerHTML = '';
 }
 
 function myFunction() {
