@@ -47,19 +47,8 @@
         </div>
 
         <div class="cart-items-container">
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="images/cart-item-1.png" alt="">
-                <div class="content">
-                    <h3>cart item 01</h3>
-                    <div class="price">$15.99/-</div>
-                </div>
-            </div>
-
-            <div id="item"></div>
-            
-            <a href="#" class="btn" onclick="placeOrder()">checkout now</a>
-            <span id="myOrder">Order Placed!</span>
+        <div  id="cart-items"></div>
+            <a class="btn" onclick="placeOrder()">checkout now</a>
         </div>
 
     </header>
@@ -173,7 +162,8 @@
             </div>
 
         </div>
-
+        <div id="snackbar">Item added to cart</div>
+        <div id="snackbar1">Order Placed</div>
     </section>
 
     <!-- menu section ends -->

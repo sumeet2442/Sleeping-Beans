@@ -28,18 +28,43 @@ window.onscroll = () => {
     cartItem.classList.remove('active');
 }
 
-// function placeOrder() {
-//     var placeOrder = document.getElementById("myOrder");
-//     placeOrder.classList.toggle("show");
-// }
-
 var item = [];
+
+function placeOrder() {
+    var x = document.getElementById("snackbar1");
+    x.className = "show";
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+    
+    document.getElementById("cart-items").innerHTML = '';   
+}
+
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+}
 
 function addItem(items) {
     item.push(items);
-    document.getElementById("item").innerHTML = item;
+    myFunction();
+    // console.log(item);
+    let cart_items = '';
+    for (i = 0; i < item.length; i++) {
 
-    var x = document.getElementById("snackbar");
-    x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        cart_items += `<div class='cart-item'>
+            <span class='fas fa-times'></span>
+            <img src='images/cart-item-1.png' alt='' />
+            <div class='content'>
+                <h3 id='item'>${item[i][0]}</h3>
+                <div class='price' id='pricee'>${item[i][1]}</div>
+            </div>
+        </div>`
+    }
+    document.getElementById("cart-items").innerHTML = cart_items;
+
+
+
+    // var x = document.getElementById("snackbar");
+    // x.className = "show";
+    // setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 }
