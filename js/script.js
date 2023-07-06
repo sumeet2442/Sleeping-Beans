@@ -65,6 +65,7 @@ function placeOrder() {
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 
     document.getElementById("cart-items").innerHTML = '';
+    item.splice(0, item.length);
 }
 
 function myFunction() {
